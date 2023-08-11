@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game Database Filter</title>
+</head>
+<body>
+  <h1>Game Database Filter</h1>
+  <form id="filterForm">
+
+    <fieldset>
+      <legend>Filter by Duration:</legend>
+      <label><input type="checkbox" name="duration" value="Short"> Short</label>
+      <label><input type="checkbox" name="duration" value="Medium"> Medium</label>
+      <label><input type="checkbox" name="duration" value="Long"> Long</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Filter by Player Dynamic:</legend>
+      <label><input type="checkbox" name="playerDynamic" value="1 vs. 1"> 1 vs 1</label>
+      <label><input type="checkbox" name="playerDynamic" value="1 vs. Game"> 1 vs Game</label>
+      <label><input type="checkbox" name="playerDynamic" value="1 vs. Many"> 1 vs Many</label>
+      <label><input type="checkbox" name="playerDynamic" value="Many vs. Game"> Many vs Game</label>
+      <label><input type="checkbox" name="playerDynamic" value="Many vs. Many"> Many vs Many</label>
+      <label><input type="checkbox" name="playerDynamic" value="Flex"> Flex</label>
+    </fieldset>
+
+    <!-- <div>
+      <label for="minPlayers">Min Players:</label>
+      <input type="range" id="minPlayers" min="1" max="10" value="1">
+      <span id="minPlayersValue">1-10</span>
+    </div>
+
+    <div>
+      <label for="maxPlayers">Max Players:</label>
+      <input type="range" id="maxPlayers" min="1" max="10" value="10">
+      <span id="maxPlayersValue">1-10</span>
+    </div> -->
+
+    <label for="players">Players:</label>
+    <input type="number" id="players" min="1" max="999">
+
+    <label for="playCmplx">Play Complexity:</label>
+    <select id="playCmplx">
+        <option value="">All Difficulties</option>
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+    </select>
+
+    <label for="facilitateCmplx">Facilitate Complexity:</label>
+    <select id="facilitateCmplx">
+        <option value="">All Difficulties</option>
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+    </select>
+
+    <label for="customizeCmplx">Customize Complexity:</label>
+    <select id="customizeCmplx">
+        <option value="">All Difficulties</option>
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+    </select>
+
+    <fieldset>
+        <legend>Filter by Game Genre:</legend>
+        <label><input type="checkbox" name="genre" value="Abstract"> Abstract</label>
+        <label><input type="checkbox" name="genre" value="Area control"> Area control</label>
+        <label><input type="checkbox" name="genre" value="Bluffing"> Bluffing</label>
+        <label><input type="checkbox" name="genre" value="Card"> Card</label>
+        <label><input type="checkbox" name="genre" value="Campaign / legacy"> Campaign / legacy</label>
+        <label><input type="checkbox" name="genre" value="Challenge / simulation"> Challenge / simulation</label>
+        <label><input type="checkbox" name="genre" value="Combat / action"> Combat / action</label>
+        <label><input type="checkbox" name="genre" value="Cooperative"> Cooperative</label>
+        <label><input type="checkbox" name="genre" value="Deck / engine builder"> Deck / engine builder</label>
+        <label><input type="checkbox" name="genre" value="Deck construction"> Deck construction</label>
+        <label><input type="checkbox" name="genre" value="Deduction"> Deduction</label>
+        <label><input type="checkbox" name="genre" value="Dexterity"> Dexterity</label>
+        <label><input type="checkbox" name="genre" value="Dice"> Dice</label>
+        <label><input type="checkbox" name="genre" value="Drafting"> Drafting</label>
+        <label><input type="checkbox" name="genre" value="Dungeon-crawler"> Dungeon-crawler</label>
+        <label><input type="checkbox" name="genre" value="Educational"> Educational</label>
+        <label><input type="checkbox" name="genre" value="Euro"> Euro</label>
+        <label><input type="checkbox" name="genre" value="Exploration / adventure"> Exploration / adventure</label>
+        <label><input type="checkbox" name="genre" value="Memory"> Memory</label>
+        <label><input type="checkbox" name="genre" value="Mystery"> Mystery</label>
+        <label><input type="checkbox" name="genre" value="Negotiation / trading"> Negotiation / trading</label>
+        <label><input type="checkbox" name="genre" value="Party"> Party</label>
+        <label><input type="checkbox" name="genre" value="Presentation"> Presentation</label>
+        <label><input type="checkbox" name="genre" value="Print & Play"> Print & Play</label>
+        <label><input type="checkbox" name="genre" value="Push-your-luck"> Push-your-luck</label>
+        <label><input type="checkbox" name="genre" value="Puzzle"> Puzzle</label>
+        <label><input type="checkbox" name="genre" value="Race"> Race</label>
+        <label><input type="checkbox" name="genre" value="Real-time"> Real-time</label>
+        <label><input type="checkbox" name="genre" value="Resource management"> Resource management</label>
+        <label><input type="checkbox" name="genre" value="Role-playing"> Role-playing</label>
+        <label><input type="checkbox" name="genre" value="Roll-and-move"> Roll-and-move</label>
+        <label><input type="checkbox" name="genre" value="Roll-and-write"> Roll-and-write</label>
+        <label><input type="checkbox" name="genre" value="Sports"> Sports</label>
+        <label><input type="checkbox" name="genre" value="Storytelling"> Storytelling</label>
+        <label><input type="checkbox" name="genre" value="Strategy"> Strategy</label>
+        <label><input type="checkbox" name="genre" value="Trivia"> Trivia</label>
+        <label><input type="checkbox" name="genre" value="Word"> Word</label>
+        <label><input type="checkbox" name="genre" value="Worker-placement"> Worker-placement</label>
+        
+    </fieldset>
+
+    <fieldset>
+        <legend>Filter by Core Dynamic:</legend>
+        <label><input type="checkbox" name="coreDynamic" value="Adaptability"> Adaptability</label>
+        <label><input type="checkbox" name="coreDynamic" value="Applied Knowledge"> Applied Knowledge</label>
+        <label><input type="checkbox" name="coreDynamic" value="Betting / Bluffing"> Betting / Bluffing</label>
+        <label><input type="checkbox" name="coreDynamic" value="Communication"> Communication</label>
+        <label><input type="checkbox" name="coreDynamic" value="Construction"> Construction</label>
+        <label><input type="checkbox" name="coreDynamic" value="Creativity"> Creativity</label>
+        <label><input type="checkbox" name="coreDynamic" value="Critical thinking"> Critical thinking</label>
+        <label><input type="checkbox" name="coreDynamic" value="Dexterity"> Dexterity</label>
+        <label><input type="checkbox" name="coreDynamic" value="Interpersonal / Social"> Interpersonal / Social</label>
+        <label><input type="checkbox" name="coreDynamic" value="Memory"> Memory</label>
+        <label><input type="checkbox" name="coreDynamic" value="Multi-tasking"> Multi-tasking</label>
+        <label><input type="checkbox" name="coreDynamic" value="Observation / Deduction"> Observation / Deduction</label>
+        <label><input type="checkbox" name="coreDynamic" value="Resourcefulness"> Resourcefulness</label>
+        <label><input type="checkbox" name="coreDynamic" value="Risk Taking"> Risk Taking</label>
+        <label><input type="checkbox" name="coreDynamic" value="Roleplaying"> Roleplaying</label>
+        <label><input type="checkbox" name="coreDynamic" value="Speed"> Speed</label>
+        <label><input type="checkbox" name="coreDynamic" value="Strategy development"> Strategy development</label>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Filter by Instinct:</legend>
+        <label><input type="checkbox" name="instinct" value="Feel"> Feel</label>
+        <label><input type="checkbox" name="instinct" value="Think"> Think</label>
+        <label><input type="checkbox" name="instinct" value="Act"> Act</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Filter by Intent:</legend>
+        <label><input type="checkbox" name="intent" value="What"> What</label>
+        <label><input type="checkbox" name="intent" value="Why"> Why</label>
+        <label><input type="checkbox" name="intent" value="How"> How</label>
+    </fieldset>
+
+    <label for="setup">Setup:</label>
+    <select id="setup">
+        <option value="Both">Both</option>
+        <option value="Physical">Physical</option>
+        <option value="Digital">Digital</option>
+    </select>
+    
+
+    <button type="submit">Apply Filters</button>
+  </form>
+
+  <div id="results">
+    <!-- Results will be displayed here -->
+  </div>
+
+  <script src="filter.js"></script>
+</body>
+</html>
